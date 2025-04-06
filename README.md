@@ -60,29 +60,14 @@ Claude デスクトップアプリケーションの設定ファイル（claude_
 
 ```json
 {
-  "mcps": [
-    {
-      "name": "Stable Diffusion プロンプト最適化",
-      "description": "日本語指示をStable Diffusion用の最適なプロンプトに変換し、画像を生成します",
-      "endpoint": "http://localhost:19001/api/mcp",
-      "enabled": true,
-      "auth": {
-        "type": "none"
-      },
-      "ui": {
-        "icon": "🖼️",
-        "category": "画像生成",
-        "shortDescription": "StableDiffusionで画像生成",
-        "examplePrompts": [
-          "青い空と緑の草原の風景を描いて",
-          "夕暮れの東京の街並みを写実的に",
-          "宇宙を飛ぶ猫のファンタジーイラスト",
-          "暖かい雰囲気の北欧風インテリア",
-          "フォトリアリスティックな黒猫の画像"
-        ]
-      }
+    "stable-diffusion-mcp": {
+      "command": "npx",
+      "args": [
+        "ts-node",
+        "d:\\sd-mcp\\direct-proxy.ts"
+       ],
+      "cwd": "d:\\sd-mcp"
     }
-  ]
 }
 ```
 
